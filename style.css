@@ -1,57 +1,63 @@
-html {
-    height: 100%;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body {
-    height: 100%;
-    width: 100%;
-    padding: auto auto;
-    background-image: url("/images/mike-benna-SBiVq9eWEtQ-unsplash.jpg");
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat;
-    background-size: auto;
-    
-    margin: auto;
-    
-}
 
-.wrapper {
+
+.fullpage {
     display: flex;
-    height: 100%;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    align-content: space-between;
-}
-
-h1 {
-    font-family: 'Pacifico', cursive;
-    font-size: 128px;
-    line-height: 10rem;
-    color: white;
-}
-
-h3 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 36px;
-    color: white;
-}
-
-header {
     text-align: center;
-
 }
 
-.title {
-    margin: 2em;
-    min-height: 100px;
+.s1 {
+    background-image: url(./images/mike-benna-SBiVq9eWEtQ-unsplash.jpg);
+    background-size: cover;
+    align-self: center;
 }
 
-.subtitle {
-    margin: 1em;
-    min-height: 100px;
+.section h1 {
+    font-size: 110px;
+    font-family: 'Pacifico', cursive;
+    color: white;
+    position: absolute;
+    text-align: center;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50% , -20%);
+    background: linear-gradient(to left, lightblue,white, lightpink);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-#downarrow {
-    transform: scale(0.05);
+.section h3 {
+    font-size: 34px;
+    font-family: 'Poppins', cursive;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000000;
+    margin: 10em 5em 5em;
+}    
+
+.s2 {
+    background-image: url(./images/kevin-laminto-K3gDQekpRoU-unsplash.jpg);
+    background-size: cover;
+    align-self: center;
 }
+
+.s3 {
+    background-image: url(./images/wade-austin-ellis-89QlzkUSwq0-unsplash.jpg);
+    background-size: cover;
+    align-self: center;
+}
+
+.description {
+    margin: 20%, 50%;
+    width: 50%;
+    margin-left: 5%;
+    font-family: 'ABeeZee', sans-serif;
+    font-size: 20px;
+    
+}
+
