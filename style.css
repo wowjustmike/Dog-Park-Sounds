@@ -31,7 +31,7 @@
     -webkit-text-fill-color: transparent;
 }
 
-.section h3 {
+.section h3, p {
     font-size: 34px;
     font-family: 'Poppins', cursive;
     color: white;
@@ -44,6 +44,15 @@
     background-image: url(./images/kevin-laminto-K3gDQekpRoU-unsplash.jpg);
     background-size: cover;
     align-self: center;
+}
+
+.audio-container {
+    display: flex;
+    justify-content: center;
+}
+
+.audio {
+    margin-top: 25vh;
 }
 
 .s3 {
