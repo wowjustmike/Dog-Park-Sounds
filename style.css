@@ -1,72 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    font-family: 'Rubik', sans-serif;
+    background: rgba(167, 219, 215, 0.5);
+    color: #FA6900;
+}
 
+.main-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  min-width: 470px;
+}
 
-.fullpage {
+.main-title-container {
+  display: flex;
+  text-align: center;
+  margin: 120px 40px;
+  padding: 10px;
+  position: relative;
+}
+
+.main-title {
+  font-size: 112px;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;  
+}
+
+.card {
     display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: 680px;
+    margin: 40px;
+    align-items: center;
+    justify-content: space-between;
     text-align: center;
+    position: relative;
+    border-radius: 15px;
+    background-repeat: no-repeat;
+
+    background-image:  
+    /* 1) An image     */ linear-gradient(to right, #FA6900, #FA6900), 
+    /* 2) Gradient     */ linear-gradient(to right, white, white);
+
+    background-position:
+    /* 1) Orange       */ 0 0, 
+    /* 2) White        */ 0 240px;
+
+    background-size:  
+    /* 1) Orange Size  */ 100% 240px,
+    /* 2) White Size   */ 100% 440px;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+  }
+
+.card-title-container {
+  display: flex;
+  margin: 0px 20px;
+  position: absolute;
+  top: 33px;
 }
 
-.s1 {
-    background-image: url(./images/mike-benna-SBiVq9eWEtQ-unsplash.jpg);
-    background-size: cover;
-    align-self: center;
-}
-
-.section h1 {
-    font-size: 110px;
-    font-family: 'Pacifico', cursive;
+.card-title {
+    font-size: 42px;
     color: white;
-    position: absolute;
-    text-align: center;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50% , -20%);
-    background: linear-gradient(to left, lightblue,white, lightpink);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
-.section h3, p {
-    font-size: 34px;
-    font-family: 'Poppins', cursive;
-    color: white;
-    text-align: center;
-    text-shadow: 2px 2px 4px #000000;
-    margin: 10em 5em 5em;
-}    
-
-.s2 {
-    background-image: url(./images/kevin-laminto-K3gDQekpRoU-unsplash.jpg);
-    background-size: cover;
-    align-self: center;
+.card-photo-container {
+  position: absolute;
+  top:160px;
+  width: 170px;
+  height: 170px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: solid 6px white;
 }
 
-.audio-container {
-    display: flex;
-    justify-content: center;
+.card-photo {
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+  margin: 0px 0px 0px -52px;
 }
 
-.audio {
-    margin-top: 25vh;
+.audio-player {
+  position: absolute;
+  top: 350px;
+  width: 17rem;
 }
 
-.s3 {
-    background-image: url(./images/wade-austin-ellis-89QlzkUSwq0-unsplash.jpg);
-    background-size: cover;
-    align-self: center;
+.card-text-container {
+  position: absolute;
+  top: 440px;
+  margin: 0px 45px;
+  height: 420;
+  width: 320;
+  /* background: palevioletred; */
 }
 
-.description {
-    margin: 20%, 50%;
-    width: 50%;
-    margin-left: 5%;
-    font-family: 'ABeeZee', sans-serif;
-    font-size: 20px;
-    
+.card-text {
+  text-align: left;
+  font-size: 14px;
+  color: black;
+  line-height: 150%;
 }
 
+/* Footer */
+
+footer {
+  margin: 40px 0px 80px 0px;
+  display: flex;
+}
+
+.button {
+  cursor: pointer;
+  font-size: 1.2rem;
+  height: 3.5rem;
+  width: 4rem;
+  margin: 0px 1rem;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  background: #4FBFD6;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  filter: brightness(110%);
+}
+
+button:active {
+  transform: translate(0, 0.2rem);
+  box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
+}
+
+.icon{
+  text-align: center;
+  font-size: 2rem;
+}
+
+.twitter-button:hover {
+  color: #38a1f3;
+}
+
+.fa-twitter {
+  font-size: 1.5rem;
+}
+
+
+/* Media Queries
+  @media only screen and (max-width: 1000px) {
+    body {
+      background-color: lightblue;
+    }
+  } */
