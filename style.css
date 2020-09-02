@@ -33,6 +33,22 @@ html {
   font-size: 112px;
 }
 
+
+/* Buttons */
+
+.button {
+  cursor: pointer;
+  border: none;
+  user-select: none;
+  outline: none !important;
+}
+
+button:hover {
+  filter: brightness(110%);
+}
+
+
+/* Cards */
 .cards-container {
   display: flex;
   flex-wrap: wrap;
@@ -96,19 +112,46 @@ html {
   margin: 0px 0px 0px -52px;
 }
 
-.audio-player {
+
+/* AUDIO CONTROLS */
+
+.audio-controls {
   position: absolute;
-  top: 350px;
-  width: 17rem;
+  top: 355px;
+}
+.play-button {
+  color: #38a1f3;
+  border: none;
+  background: none;
+  margin: 0px 15px;
+}
+
+.fas {
+  font-size: 35px;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#play:active, #pause:active {
+  transform: scale(.95);
+}
+
+#volume {
+  position: absolute;
+  top: 620px;
+  width: 200px;
+}
+
+/* HTML Audio Player - Hidden - Only use to test audio and control track*/
+.tracks {
+  display: none;
 }
 
 .card-text-container {
   position: absolute;
-  top: 440px;
+  top: 430px;
   margin: 0px 45px;
   height: 420;
   width: 320;
-  /* background: palevioletred; */
 }
 
 .card-text {
@@ -119,19 +162,15 @@ html {
 }
 
 /* Footer */
-
 footer {
   margin: 40px 0px 80px 0px;
   display: flex;
 }
 
-.button {
-  cursor: pointer;
+.footer-button {
   font-size: 1.2rem;
   height: 3.5rem;
   width: 4rem;
-  margin: 0px 1rem;
-  border: none;
   border-radius: 5px;
   color: white;
   justify-content: center;
@@ -141,32 +180,14 @@ footer {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-button:hover {
-  filter: brightness(110%);
-}
-
-button:active {
-  transform: translate(0, 0.2rem);
-  box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
-}
-
-.icon{
+.fa-twitter {
+  font-size: 1.5rem;
   text-align: center;
   font-size: 2rem;
 }
 
-.twitter-button:hover {
-  color: #38a1f3;
+.footer-button:active {
+  transform: translate(0, 0.1rem);
+  box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
 }
 
-.fa-twitter {
-  font-size: 1.5rem;
-}
-
-
-/* Media Queries
-  @media only screen and (max-width: 1000px) {
-    body {
-      background-color: lightblue;
-    }
-  } */

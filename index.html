@@ -32,44 +32,27 @@
                 <div class="card-photo-container">
                    <img src="./images/wade-austin-ellis-89QlzkUSwq0-unsplash.jpg" alt="happy brown lab" class="card-photo"> 
                 </div>
-                <audio controls class="audio-player">
-                    <source loop=true src="./audio/Fort Greene Dog Park 1.mp3" type="audio/mpeg">
+                <!-- Audio Tracks -->
+                <audio id="track-1-0" preload class="tracks">
+                    <source src="./audio/final/fg1.mp3" type="audio/mpeg">
                     Your browser does not support the audio tag.
                 </audio>
-                <div class="card-text-container">
-                    <p class="card-text">Fort Greene Park is a 30.2-acre park in Brooklyn, New York City. It was named after the fort which was formerly located there, originally named Fort Putnam, and then renamed in 1812 for Nathanael Greene, a hero of the American Revolutionary War.</p>
-                </div>
-            </div>
-
-            <!-- Prospect Park -->
-            <div class="card">
-                <div class="card-title-container">
-                    <h3 class="card-title">Fort Greene Park</h3>
-                </div>  
-                <div class="card-photo-container">
-                   <img src="./images/wade-austin-ellis-89QlzkUSwq0-unsplash.jpg" alt="happy brown lab" class="card-photo"> 
-                </div>
-                <audio controls class="audio-player">
-                    <source loop=true src="./audio/Fort Greene Dog Park 1.mp3" type="audio/mpeg">
+                <audio id="track-1-1" preload class="tracks">
+                    <source src="./audio/final/fg2.mp3" type="audio/mpeg">
                     Your browser does not support the audio tag.
                 </audio>
-                <div class="card-text-container">
-                    <p class="card-text">Fort Greene Park is a 30.2-acre park in Brooklyn, New York City. It was named after the fort which was formerly located there, originally named Fort Putnam, and then renamed in 1812 for Nathanael Greene, a hero of the American Revolutionary War.</p>
-                </div>
-            </div>
-
-            <!-- Brooklyn Bridge Park -->
-            <div class="card">
-                <div class="card-title-container">
-                    <h3 class="card-title">Fort Greene Park</h3>
-                </div>  
-                <div class="card-photo-container">
-                   <img src="./images/wade-austin-ellis-89QlzkUSwq0-unsplash.jpg" alt="happy brown lab" class="card-photo"> 
-                </div>
-                <audio controls class="audio-player">
-                    <source loop=true src="./audio/Fort Greene Dog Park 1.mp3" type="audio/mpeg">
+                <audio id="track-1-2" preload class="tracks">
+                    <source src="./audio/final/fg3.mp3" type="audio/mpeg">
                     Your browser does not support the audio tag.
                 </audio>
+                <!-- Audio Controls -->
+                <div class="audio-controls">
+                    <button class="play-button button"  title="Play">
+                        <i id="play" class="fas fa-play"></i>
+                    </button>
+                </div>
+                <!-- Volume Control -->
+                <input type="range" name="volume" id="volume"></input>
                 <div class="card-text-container">
                     <p class="card-text">Fort Greene Park is a 30.2-acre park in Brooklyn, New York City. It was named after the fort which was formerly located there, originally named Fort Putnam, and then renamed in 1812 for Nathanael Greene, a hero of the American Revolutionary War.</p>
                 </div>
@@ -79,16 +62,14 @@
         </div>
 
         <footer class="footer">
-            <!-- Instagram Icon -->
-            <button onclick="document.location='https://www.instagram.com/wowjustmike/'" target="_blank" class="button instagram-btn" title="wowjustmike is on Instagram">
-                <i class=" icon fab fa-instagram" ></i>
-            </button>
-                
-            <button class="button twitter-btn" id="twitter" title="Share On Twitter">
+            <button class="footer-button button" title="Share On Twitter">
                 <i class="icon fab fa-twitter"></i>
             </button>
         </footer>
     <!-- End Of Main-Container -->
     </div>
+
+    <!-- Script -->
+    <script src="./script.js"></script>
 </body>
 </html>
