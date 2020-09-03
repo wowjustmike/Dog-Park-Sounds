@@ -15,21 +15,18 @@ html {
     
 } 
 
-.body {
-  /* width: 100%;
-  background: crimson; */
-
+.body { 
   /* Font Sizing - 1.4rem = 14px*/
   font-size: 1.4rem;
-  text-align: center;
 }
 .main-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  align-content: center;
-  width: 100%;
+  /*align-content: center;
+  width: 100%; */
+
   /* background: darkblue; */
   
 }
@@ -44,10 +41,10 @@ html {
 
 .main-title {
   font-size: 11rem;
-  margin: 16rem 0rem;
+  margin: 16rem 8rem;
   text-align: center;
   
-  background: lightgoldenrodyellow;
+  /* background: lightgoldenrodyellow; */
 }
 
 
@@ -64,57 +61,70 @@ button:hover {
   filter: brightness(110%);
 }
 
+.about-container {
+  max-width: 38rem;
+  min-width: 15rem;
+  margin: 2rem 4rem 6rem 4rem;
+}
+.about-text {
+  font-size: 1.6rem;
+  color: black;
+  text-align: center;
+}
+
 
 /* Cards */
 .cards-container {
   display: flex;
   flex-direction: row;
-  max-width: 136rem;
   flex-wrap: wrap;
   justify-content: center;
-  background: lightpink;  
+  /* background: lightpink;   */
 }
 
 .card {
     display: flex;
+    position: relative;
     flex-direction: column;
-    width: 35rem;
-    height: 68rem;
+
+    min-width: 22rem;
+    min-height: 66rem;
+
+    max-width: 32rem;
+    max-height: 74rem;
+
     margin: 4rem;
     align-items: center;
     justify-content: space-between;
     text-align: center;
-    position: relative;
+ 
     border-radius: 1.5rem;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; 
 
     background-image:  
     /* Orange */ linear-gradient(to right, #FA6900, #FA6900), 
     /* White */ linear-gradient(to right, white, white);
 
     background-position:
-    /* 1) Orange       */ 0 0, 
-    /* 2) White        */ 0 24rem;
+    /* 1) Orange      */ 0 0, 
+    /* 2) White       */ 0 24rem;
 
     background-size:  
-    /* 1) Orange Size  */ 100% 24rem,
-    /* 2) White Size   */ 100% 44rem;
+    /* 1) Orange Size */ 100% 24rem,
+    /* 2) White Size  */ 100% 100%;
 
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
   }
 
-.card-title-container {
-  display: flex;
-  margin: 0rem 2rem;
-  position: absolute;
-  top: 3.3rem;
-}
 
 .card-title {
-    font-size: 4.2rem;
-    color: white;
+  font-size: 4.2rem;
+  color: white;
+  margin: 2rem 2rem;
+  
 }
 
+/* Card Photo */
 .card-photo-container {
   position: absolute;
   top:160px;
@@ -124,7 +134,6 @@ button:hover {
   border-radius: 50%;
   border: solid 6px white;
 }
-
 .card-photo {
   margin: 0 auto;
   height: 100%;
@@ -171,7 +180,7 @@ button:hover {
   top: 47rem;
   height: auto;
   width: 80%;
-  background: lightgreen;
+  /* background: lightgreen; */
 }
 
 .card-text {
@@ -216,15 +225,48 @@ footer {
 /* Media Queries */
 
 /* iPhone 8+ */
-@media only screen and (max-device-width: 550px) { 
+@media only screen 
+  and (min-device-width: 300px) 
+  and (max-device-width: 568px) { 
+
+    .main-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      align-content: center;
+      width: 100%;
+
+    }
 
     .main-title{
-      font-size: 8rem;
-      margin: 8rem 0rem;
-      padding: 2rem;
+      font-size: 7rem;
+      margin: 6rem 0rem;
+      padding: 1rem;
     }
 
     .card-title{
+      margin-top: 3.2rem;
+    }
+
+    .card {
+      /* width: 22rem;
+      height: 74rem; */
+      margin: 2.4rem;
+   
+      border-radius: 1.5rem;
+      background-repeat: no-repeat; 
+  
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+    }
+}
+
+@media only screen 
+  and (min-device-width: 300px) 
+  and (max-device-width: 336px) {
+
+    .card-title{
       font-size: 3.8rem;
+      margin-top: 3.2rem;
     }
 }
