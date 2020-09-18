@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-39202456-4"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-39202456-4');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-eqiv="X-UA-Compatible" content="ie=edge">
@@ -11,27 +21,39 @@
     <!-- Style Links -->
     <script src="https://kit.fontawesome.com/3e57a622a1.js" crossorigin="anonymous"></script>
     <link rel=icon href='./images/icons/favicon.ico'>
-    <link rel="stylesheet" href="./style copy.css">
+    <link rel="stylesheet" href="./style.css">
     <title>Dog Park Sounds</title>
 </head>
 <body>
     <div class="main-container">
+        
         <header>
-            <!-- <div class="main-title-container"> -->
+            <img src="\images\logo\Logo 1v2.svg" alt="Dog Park Sounds Logo by Mike Edmonds" class="main-logo">
                 <h1 class="main-title">Dog Park Sounds</h1>
-            <!-- </div> -->
         </header>
     <!-- About -->
         <div class="about-container">
             <p class="about-text">
-                Relax and listen to the calming acoustics of dogs unleashed in parks all over Brooklyn, NY. 
+                Listen and relax to the calming acoustics of dogs unleashed in parks all over Brooklyn, NY. 
             </p>
         </div>
-    
+    <!-- Audio Tracks (HIDDEN) -->
+                <audio id="track-1-0" preload class="tracks">
+                    <source src="./audio/final/fg1.mp3" type="audio/mpeg">
+                    Your browser does not support the audio tag.
+                </audio>
+                <audio id="track-1-1" preload class="tracks">
+                    <source src="./audio/final/fg2.mp3" type="audio/mpeg">
+                    Your browser does not support the audio tag.
+                </audio>
+                <audio id="track-1-2" preload class="tracks">
+                    <source src="./audio/final/fg3.mp3" type="audio/mpeg">
+                    Your browser does not support the audio tag.
+                </audio>
     <!-- Card Container - Flex Row -->
         <div class="cards-container">
             
-        <!-- Fort Greene Park -->
+        <!-- Card 1 - Fort Greene Park -->
             <div class="card">
                 <div class="card-title-container">
                     <h3 class="card-title">Fort Greene Park</h3>
@@ -39,149 +61,61 @@
                 <div class="card-photo-container">
                    <img src="./images/wade-austin-ellis-89QlzkUSwq0-unsplash.jpg" alt="happy brown lab" class="card-photo"> 
                 </div>
-            <!-- Audio Tracks -->
-                <audio id="track-1-0" preload class="tracks">
-                    <source src="./audio/final/fg1.mp3" type="audio/mpeg">
-                    Your browser does not support the audio tag.
-                </audio>
-                <audio id="track-1-1" preload class="tracks">
-                    <source src="./audio/final/fg2.mp3" type="audio/mpeg">
-                    Your browser does not support the audio tag.
-                </audio>
-                <audio id="track-1-2" preload class="tracks">
-                    <source src="./audio/final/fg3.mp3" type="audio/mpeg">
-                    Your browser does not support the audio tag.
-                </audio>
-            <!-- Audio Controls -->
+            
+            <!-- Audio Controls Container-->
+            <div class="audio-controls-container">
+
+                <!-- Play/Pause/FWD Controls -->
                 <div class="audio-controls">
-                    <button class="play-button button"  title="Play">
+                    <button class="play-button btn"  title="Play">
                         <i id="play" class="fas fa-play"></i>
                     </button>
+                    <!-- <button class="next-button btn"  title="Next">
+                        <i id="next" class="fas fa-forward"></i>
+                    </button> -->
                 </div>
-            <!-- Volume Control -->
-                <input type="range" name="volume" id="volume"></input>
 
+                <!-- Volume Control -->
+                <div class="volume-container">
+                    <i class="fas fa-volume-down"></i>
+                    <!-- Volume Slider -->
+                    <input type="range" min="1" max="100" value="50" name="Volume" title="Volume" class="volume"></input>
+                    <i class="fas fa-volume-up"></i>
+                </div>
+
+            </div>
+                
+
+            <!-- Google Maps -->
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12100.81347451775!2d-73.9752312!3d40.6915185!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x78ef226ebb3eed50!2sFort%20Greene%20Park!5e0!3m2!1sen!2sus!4v1600440809730!5m2!1sen!2sus" width="400" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" class="google-map"></iframe>
+            </div>
+            
             <!-- Card Text -->
-                <div class="card-text-container">
-                    <p class="card-text">Fort Greene Park is a 30.2-acre park in Brooklyn, New York City. It was named after the fort which was formerly located there, originally named Fort Putnam, and then renamed in 1812 for Nathanael Greene, a hero of the American Revolutionary War.</p>
+                <div class="card-info-container">
+                    <div class="card-text-container">
+                        <span class="card-text-title">Off-Leash Hours</span>
+                        <span class="card-text">6am - 9am & 9pm - 1am</span>
+                    </div>
+                        <a href="https://www.nycgovparks.org/parks/fort-greene-park/facilities/dogareas" target="_blank" class="link-btn park-info">
+                            <i class="fas fa-info-circle"></i>
+                            More Info
+                        </a>
                 </div>
             </div>
             
-        <!-- Fort Greene Park 2 -->
-            <div class="card">
-                <div class="card-title-container">
-                    <h3 class="card-title">Fort Greene Park 2</h3>
-                </div>  
-                <div class="card-photo-container">
-                   <img src="./images/wade-austin-ellis-89QlzkUSwq0-unsplash.jpg" alt="happy brown lab" class="card-photo"> 
-                </div>
-            <!-- Audio Tracks -->
-                <audio id="track-1-0" preload class="tracks">
-                    <source src="./audio/final/fg1.mp3" type="audio/mpeg">
-                    Your browser does not support the audio tag.
-                </audio>
-                <audio id="track-1-1" preload class="tracks">
-                    <source src="./audio/final/fg2.mp3" type="audio/mpeg">
-                    Your browser does not support the audio tag.
-                </audio>
-                <audio id="track-1-2" preload class="tracks">
-                    <source src="./audio/final/fg3.mp3" type="audio/mpeg">
-                    Your browser does not support the audio tag.
-                </audio>
-            <!-- Audio Controls -->
-                <div class="audio-controls">
-                    <button class="play-button button"  title="Play">
-                        <i id="play" class="fas fa-play"></i>
-                    </button>
-                </div>
-            <!-- Volume Control -->
-                <input type="range" name="volume" id="volume"></input>
-
-            <!-- Card Text -->
-                <div class="card-text-container">
-                    <p class="card-text">Fort Greene Park is a 30.2-acre park in Brooklyn, New York City. It was named after the fort which was formerly located there, originally named Fort Putnam, and then renamed in 1812 for Nathanael Greene, a hero of the American Revolutionary War.</p>
-                </div>
-            </div>
-
-        <!-- Fort Greene Park 3 -->
-            <div class="card">
-                <div class="card-title-container">
-                    <h3 class="card-title">Fort Greene Park 3</h3>
-                </div>  
-                <div class="card-photo-container">
-                   <img src="./images/wade-austin-ellis-89QlzkUSwq0-unsplash.jpg" alt="happy brown lab" class="card-photo"> 
-                </div>
-            <!-- Audio Tracks -->
-                <audio id="track-1-0" preload class="tracks">
-                    <source src="./audio/final/fg1.mp3" type="audio/mpeg">
-                    Your browser does not support the audio tag.
-                </audio>
-                <audio id="track-1-1" preload class="tracks">
-                    <source src="./audio/final/fg2.mp3" type="audio/mpeg">
-                    Your browser does not support the audio tag.
-                </audio>
-                <audio id="track-1-2" preload class="tracks">
-                    <source src="./audio/final/fg3.mp3" type="audio/mpeg">
-                    Your browser does not support the audio tag.
-                </audio>
-            <!-- Audio Controls -->
-                <div class="audio-controls">
-                    <button class="play-button button"  title="Play">
-                        <i id="play" class="fas fa-play"></i>
-                    </button>
-                </div>
-            <!-- Volume Control -->
-                <input type="range" name="volume" id="volume"></input>
-
-            <!-- Card Text -->
-                <div class="card-text-container">
-                    <p class="card-text">Fort Greene Park is a 30.2-acre park in Brooklyn, New York City. It was named after the fort which was formerly located there, originally named Fort Putnam, and then renamed in 1812 for Nathanael Greene, a hero of the American Revolutionary War.</p>
-                </div>
-            </div>
-
-        <!-- Fort Greene Park 4 -->
-            <div class="card">
-                <div class="card-title-container">
-                    <h3 class="card-title">Fort Greene Park 4</h3>
-                </div>  
-                <div class="card-photo-container">
-                   <img src="./images/wade-austin-ellis-89QlzkUSwq0-unsplash.jpg" alt="happy brown lab" class="card-photo"> 
-                </div>
-            <!-- Audio Tracks -->
-                <audio id="track-1-0" preload class="tracks">
-                    <source src="./audio/final/fg1.mp3" type="audio/mpeg">
-                    Your browser does not support the audio tag.
-                </audio>
-                <audio id="track-1-1" preload class="tracks">
-                    <source src="./audio/final/fg2.mp3" type="audio/mpeg">
-                    Your browser does not support the audio tag.
-                </audio>
-                <audio id="track-1-2" preload class="tracks">
-                    <source src="./audio/final/fg3.mp3" type="audio/mpeg">
-                    Your browser does not support the audio tag.
-                </audio>
-            <!-- Audio Controls -->
-                <div class="audio-controls">
-                    <button class="play-button button"  title="Play">
-                        <i id="play" class="fas fa-play"></i>
-                    </button>
-                </div>
-            <!-- Volume Control -->
-                <input type="range" name="volume" id="volume"></input>
-
-            <!-- Card Text -->
-                <div class="card-text-container">
-                    <p class="card-text">Fort Greene Park is a 30.2-acre park in Brooklyn, New York City. It was named after the fort which was formerly located there, originally named Fort Putnam, and then renamed in 1812 for Nathanael Greene, a hero of the American Revolutionary War.</p>
-                </div>
-            </div>
-          
+        
     <!-- End Of Cards-Container -->
         </div>
     <!-- Footer -->
-        <footer class="footer">
-            <button class="footer-button button" title="Share On Twitter">
+        <footer class="footer-container">
+            <span class="twitter-text">Share on Twitter!</span>
+            <button class="twitter-button btn" title="Share On Twitter">
                 <i class="icon fab fa-twitter"></i>
             </button>
+            <span class="credits-text">This site was designed and developed by Mike Edmonds</span>
+            <span class="credits-text">Get in touch - <a href="mailto:medmondsr@gmail.com">medmondsr@gmail.com</a></span>
+            
         </footer>
 <!-- End Of Main-Container -->
     </div>

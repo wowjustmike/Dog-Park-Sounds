@@ -1,31 +1,24 @@
 const track = document.querySelector('.tracks'),
         prevBtn = document.querySelector('prev'),
         playBtn = document.querySelector('#play'),
-        nextBtn = document.querySelector('next')
-        volume = document.querySelector('#volume');
+        nextBtn = document.querySelector('#next')
+        volumeSlider = document.querySelector('#volume');
 
 
 // console.log(volume);
 
-// Tracks
+// Pick random track
 const pickTrack = () => {
     const rNum = Math.floor(Math.random()*3+1);
     console.log(rNum);
     return track.src = `/audio/final/fg${rNum}.mp3`;
 }
 
-console.log('test');
-
 // Check if Playing
 let isPlaying = false;
 
-//Update DOM
-// function loadTrack(track) {
-//     track.src = `audio/final/${tracklist.name}.mp3`;
-// }
-
 // Play
-var playSong = () => {
+var playTrack = () => {
     pickTrack();
     isPlaying = true;
     playBtn.classList.replace('fa-play', 'fa-pause');
@@ -34,26 +27,30 @@ var playSong = () => {
 }
 
 // Pause
-var pauseSong = () => {
+var pauseTrack = () => {
     isPlaying = false;
     playBtn.classList.replace('fa-pause', 'fa-play');
     playBtn.setAttribute('title', 'Play');
     track.pause();
 }
 
-// Play or Pause Event Listener
+// Next Track
+var nextTrack = () => {
+    pickTrack();
+    isPlaying = true;
+    playBtn.classList.replace('fa-play', 'fa-pause');
+    playBtn.setAttribute('title', 'Pause');
+    track.play();
+}
+// Event Listeners
 
-playBtn.addEventListener('click', () => (isPlaying ? pauseSong() : playSong()));
+playBtn.addEventListener('click', () => (isPlaying ? pauseTrack() : playTrack()));
 
-volume.addEventListener('change', function(e){
-    track.volume = e.currentTarget.value / 100;
-});
+nextBtn.addEventListener('click', () => (isPlaying ? pauseTrack() : nextTrack()));
 
 
 
-
-
-// On load - Select Random Track
-
-
-// console.log('Playing track: ' + rNum);
+// Volume Slider
+// volume.addEventListener('change', function(e){
+//     track.volume = e.currentTarget.value / 100;
+// });

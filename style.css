@@ -1,4 +1,6 @@
+/* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
 * {
     margin: 0;
@@ -8,121 +10,177 @@
 
 html {
     font-family: 'Rubik', sans-serif;
-    background: rgba(167, 219, 215, 0.5);
-    color: #FA6900;
+    background-image: radial-gradient(#1DAA60, #1DAA60) ;
+    color: #FFDD5C;
     /* Setting rem value */
     font-size: 62.5%;
     
 } 
 
-.body {
-  /* width: 100%;
-  background: crimson; */
-
+.body { 
   /* Font Sizing - 1.4rem = 14px*/
-  font-size: 1.4rem;
+  font-size: 2rem;
   text-align: center;
+  line-height: 2.5rem;
 }
+
+a {
+  text-decoration: none;
+  color: #FFDD5C;
+}
+
 .main-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  align-content: center;
-  width: 100%;
-  /* background: darkblue; */
-  
-}
-
-/* .main-title-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
- 
-  background: chartreuse;
-} */
-
-.main-title {
-  font-size: 11rem;
-  margin: 16rem 0rem;
-  text-align: center;
-  
-  background: lightgoldenrodyellow;
 }
 
 
-/* Buttons */
-
-.button {
-  cursor: pointer;
-  border: none;
-  user-select: none;
-  outline: none !important;
-}
-
-button:hover {
-  filter: brightness(110%);
-}
-
-
-/* Cards */
-.cards-container {
-  display: flex;
-  flex-direction: row;
-  max-width: 136rem;
-  flex-wrap: wrap;
-  justify-content: center;
-  background: lightpink;  
-}
-
-.card {
+/* HEADER - TITLE AND LOGO */
+  header {
     display: flex;
     flex-direction: column;
-    width: 35rem;
-    height: 68rem;
-    margin: 4rem;
     align-items: center;
-    justify-content: space-between;
-    text-align: center;
-    position: relative;
-    border-radius: 1.5rem;
-    background-repeat: no-repeat;
-
-    background-image:  
-    /* Orange */ linear-gradient(to right, #FA6900, #FA6900), 
-    /* White */ linear-gradient(to right, white, white);
-
-    background-position:
-    /* 1) Orange       */ 0 0, 
-    /* 2) White        */ 0 24rem;
-
-    background-size:  
-    /* 1) Orange Size  */ 100% 24rem,
-    /* 2) White Size   */ 100% 44rem;
-
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+    justify-content: center;
   }
 
-.card-title-container {
-  display: flex;
-  margin: 0rem 2rem;
-  position: absolute;
-  top: 3.3rem;
-}
+  .main-title {
+    font-size: 14rem;
+    margin: 10rem 8rem;
+    text-align: center;
+    font-family: 'Fredoka One', cursive;
+  }
+
+  .main-logo {
+    display: block;
+    position: relative;
+    align-self: center;
+    margin-top: 15rem;
+    user-select: none;
+  }
+
+
+/* BUTTONS */
+  .btn, .link-btn {
+    cursor: pointer;
+    border: none;
+    user-select: none;
+  }
+  .btn {
+    outline: none !important;
+    background: none;
+    font-size: 4rem;
+  }
+  .btn:hover, .link-btn:hover{
+    filter: brightness(110%);
+  }
+
+
+/* ABOUT */
+  .about-container {
+    max-width: 38rem;
+    min-width: 15rem;
+    margin: 5rem 5.5rem 15rem 5.5rem;
+  }
+  .about-text {
+    font-size: 2rem;
+    text-align: center;
+    line-height: 2.5rem;
+  }
+
+
+/* CARDS */
+  .cards-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* background: lightpink;   */
+  }
+
+  .card {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+
+      /* Start Opacity 0 to fade-in */
+      /* opacity: 0; */
+
+      min-width: 22rem;
+      max-width: 42rem;
+
+      height: 92rem;
+
+      margin: 4rem;
+      align-items: center;
+      justify-content: space-between;
+      text-align: center;
+  
+      border-radius: 1.5rem;
+      background-repeat: no-repeat; 
+
+      background-image:  
+      /* Orange */ linear-gradient(to top,#FFDD5C, #F7B731), 
+      /* White */ linear-gradient(to right, white, white);
+
+      background-position:
+      /* 1) Orange      */ 0 0, 
+      /* 2) White       */ 0 24rem;
+
+      background-size:  
+      /* 1) Orange Size */ 100% 24rem,
+      /* 2) White Size  */ 100% 100%;
+
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+
+
+      /* CARD ANIMATION */
+
+      /* animation-name: fade-in, move-up;
+      animation-duration: 1s, 1s;
+      animation-delay: 1s, 1s;
+      animation-fill-mode: forwards;
+
+      transition: transform 0.3s ease; */
+
+    }
+
+  @keyframes fade-in{
+      from {
+          opacity: 0;
+      }
+      to {
+          opacity: 1;
+      }
+  }
+  @keyframes move-up{
+      from {
+          opacity: 0;
+      }
+      to {
+          opacity: 1;
+      }
+  }
+  
 
 .card-title {
-    font-size: 4.2rem;
-    color: white;
+  font-size: 5.5rem;
+  color: white;
+  margin: 2.5rem 2rem 2rem 2rem;
+  
 }
 
+/* Card Photo */
 .card-photo-container {
   position: absolute;
-  top:160px;
+  top:170px;
   width: 170px;
   height: 170px;
   overflow: hidden;
   border-radius: 50%;
-  border: solid 6px white;
+  border: solid 1rem white;
+  user-select: none;
 }
 
 .card-photo {
@@ -134,97 +192,366 @@ button:hover {
 
 
 /* AUDIO CONTROLS */
+  .audio-controls-container{
+    position: absolute;
+    top: 355px;
+    min-width: 22rem;
+    max-width: 42rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .audio-controls {
+    position: relative;
+  }
+  .fa-play, .fa-pause, .fa-forward, .fa-volume-down, .fa-volume-up{
+    color: #F7B731;
+    border: none;
+    background: none;
+    margin: 0px .8rem;
+    /* text-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); */
+  }
+  .fa-play, .fa-pause {
+    margin-left: 5rem;
+  }
+  #play:active, #pause:active, #forward:active {
+    transform: scale(.95);
+  }
 
-.audio-controls {
-  position: absolute;
-  top: 355px;
+  
+/* Volume */
+.volume-container {
+  display: flex;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+  margin-left: 3rem;
 }
-.play-button {
-  color: #38a1f3;
-  border: none;
-  background: none;
-  margin: 0px 15px;
+.volume {
+  -webkit-appearance: none;
+  width: 10rem;
+  background: #F7B731;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .3s;
+  transition: opacity .3s;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 3rem;
+}
+.volume:hover {
+  opacity: 1;
+}
+.volume::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 2rem;
+  height: 2rem;
+  background: white;
+  cursor: pointer;
+  border-radius: 50%;
+  border: solid 1rem white;
+}
+.fa-volume-down , .fa-volume-up {
+  font-size: 2rem;
+  padding: 0rem .5rem;
 }
 
-.fas {
-  font-size: 3.5rem;
-  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-#play:active, #pause:active {
-  transform: scale(.95);
-}
-
-#volume {
-  position: absolute;
-  top: 42rem;
-  width: 15rem;
-}
 
 /* HTML Audio Player - Hidden - Only use to test audio and control track*/
 .tracks {
   display: none;
 }
 
-.card-text-container {
-  position: absolute;
-  top: 47rem;
+/* Card Text */
+.card-info-container {
+  position: absolute; top: 43rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  
   height: auto;
-  width: 80%;
-  background: lightgreen;
+  min-width: 22rem;
+  max-width: 42rem;
 }
-
+.card-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 18rem;
+}
+.card-text-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: black;
+}
 .card-text {
-  text-align: left;
-  font-size: 14px;
+  font-size: 1.8rem;
   color: black;
   line-height: 150%;
+  margin: 1rem 2rem;
 }
 
-/* Footer */
-footer {
-  margin: 40px 0px 80px 0px;
+.link-btn {
   display: flex;
   justify-content: center;
+  align-items: center;
+
+  background: #F7B731;
+  width: 16rem;
+  border-radius: .6rem;
+  margin: 2rem 1rem 1rem 1rem;
+
+  /* Link Button Text */
+  font-size: 2rem;
+  color: white;
+  padding: 1rem;
 }
 
-.footer-button {
-  font-size: 1.2rem;
-  height: 3.5rem;
-  width: 4rem;
-  border-radius: 5px;
+.fa-info-circle {
   color: white;
+  padding-right: 1rem;
+}
+
+
+/* Google Map */
+.map-container {
+  position: absolute;
+  top: 56rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 22rem;
+  max-width: 42rem;
+}
+.google-map {
+  border-radius: 1.5rem;
+  /* width: auto; */
+  margin: 0rem 4rem;
+}
+
+
+
+
+/* Footer */
+.footer-container {
+  margin:  2rem 0rem 8rem 0rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}
+
+.twitter-text {
+  margin: 1rem;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 2.5rem;
+  color: white;
+}
+
+.twitter-button {
+  height: 5rem;
+  width: 12rem;
+  border-radius: 4px;
+  color: white;
+  display: flex;
   justify-content: center;
   align-items: center;
   outline: none;
   background: #4FBFD6;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 5rem;
 }
 
 .fa-twitter {
-  font-size: 1.5rem;
+  font-size: 3rem;
   text-align: center;
-  font-size: 2rem;
 }
 
-.footer-button:active {
-  transform: translate(0, 0.1rem);
-  box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
+.twitter-button:active {
+  transform: scale(.96);
 }
+
+/* End Credits */
+.credits-text {
+  color: white;
+  margin: .06rem;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 2.5rem;
+}
+
+
+
+
 
 
 /* Media Queries */
 
-/* iPhone 8+ */
-@media only screen and (max-device-width: 550px) { 
+/* Mobile Screens */
+@media only screen 
+  and (min-device-width: 300px) 
+  and (max-device-width: 568px) { 
 
+    .main-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      align-content: center;
+      width: 100%;
+
+    }
+
+/* MQ Title */
+    .main-logo{
+      width: 24rem;
+      margin-top: 4rem;
+    }
     .main-title{
-      font-size: 8rem;
-      margin: 8rem 0rem;
-      padding: 2rem;
+      font-size: 7rem;
+      margin: 1rem 0rem;
+      padding: 1rem;
     }
 
-    .card-title{
-      font-size: 3.8rem;
-    }
+/* MQ ABOUT */
+.about-container {
+  max-width: 38rem;
+  min-width: 15rem;
+  margin: 5rem;
+}
+
+.about-text {
+  font-size: 1.8rem;
+}
+
+/* MQ Card */
+  .card {
+    width: 28rem;
+    margin: 2rem;
+    height: 93rem;
+
+    border-radius: 1.5rem;
+    background-repeat: no-repeat; 
+
+    background-image:  
+    /* Orange */ linear-gradient(to top,#FFDD5C, #F7B731), 
+    /* White */ linear-gradient(to right, white, white);
+
+    background-position:
+    /* 1) Orange      */ 0 0, 
+    /* 2) White       */ 0 22.8rem;
+
+    background-size:  
+    /* 1) Orange Size */ 100% 22.8rem,
+    /* 2) White Size  */ 100% 100%;
+  }
+
+  .card-title {
+    font-size: 4rem;
+    color: white;
+    margin: 2.5rem 2rem 2rem 2rem;
+    
+  }
+  
+/* Card Photo */
+  .card-photo-container {
+    top:145px;
+  }
+
+
+/* AUDIO CONTROLS */
+  .audio-controls-container{
+    top: 34rem;
+  }
+
+  .audio-controls{
+    width: 28rem;
+  }
+
+  .fa-play, .fa-pause, .fa-forward{
+    margin: 0;
+  }
+  
+/* Volume (Hidden)*/
+  .volume-container {
+    display: none;
+  }
+
+
+/* ************************************************************************ */
+
+/* MQ Card Text */
+.card-info-container {
+  top: 40rem;
+  width: 28rem;
+  margin: 2rem;
+}
+.card-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 18rem;
+}
+.card-text-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: black;
+}
+.card-text {
+  font-size: 1.8rem;
+  color: black;
+  line-height: 150%;
+  margin: 1rem 2rem;
+}
+
+.link-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #F7B731;
+  width: 16rem;
+  border-radius: .6rem;
+  margin: 1.5rem 1rem 1rem 1rem;
+
+  /* MQLink Button Text */
+  font-size: 1.8rem;
+  color: white;
+  padding: .8rem;
+}
+
+.fa-info-circle {
+  color: white;
+  padding-right: .8rem;
+}
+ 
+
+/* MQ Google Map */
+.map-container {
+  position: absolute;
+  top: 60rem;
+  width: 28rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.google-map {
+  border-radius: 1.5rem;
+  width: 22rem;
+}
+
+
+/* MQ Footer */
+.footer-container {
+  margin:  2rem;
+}
+
 }
